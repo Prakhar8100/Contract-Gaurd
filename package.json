@@ -1,0 +1,19 @@
+{
+  "name": "contract-guard",
+  "version": "1.0.0",
+  "description": "Contract Guard - Security and management system for contracts",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=packages/client\" \"npm run dev --workspace=packages/api-gateway\" \"npm run dev --workspace=packages/services\"",
+    "dev:client": "npm run dev --workspace=packages/client",
+    "dev:gateway": "npm run dev --workspace=packages/api-gateway",
+    "dev:services": "npm run dev --workspace=packages/services",
+    "build": "npm run build --workspaces"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

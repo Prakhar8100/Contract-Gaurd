@@ -1,0 +1,24 @@
+{
+  "name": "contract-guard-services",
+  "version": "1.0.0",
+  "description": "Contract Guard - Microservices (Auth, Contract, Guard)",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"node --watch src/auth-service.js\" \"node --watch src/contract-service.js\" \"node --watch src/guard-service.js\"",
+    "dev:all": "concurrently \"node --watch src/auth-service.js\" \"node --watch src/contract-service.js\" \"node --watch src/guard-service.js\"",
+    "dev:auth": "node --watch src/auth-service.js",
+    "dev:contract": "node --watch src/contract-service.js",
+    "dev:guard": "node --watch src/guard-service.js",
+    "build": "echo 'No build needed'",
+    "test": "echo 'Tests pending'"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^17.4.0",
+    "express": "^4.18.0",
+    "joi": "^18.1.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.6.0",
+    "redis": "^4.6.0"
+  }
+}

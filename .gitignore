@@ -1,11 +1,25 @@
+# Dependencies
 node_modules/
+/.pnp
+.pnp.js
+package-lock.json
+yarn.lock
+
+# Production builds
 dist/
 build/
+out/
+.next/
+.turbo/
+
+# Environment variables
 .env
 .env.local
 .env.*.local
-*.log
-.DS_Store
+.env.production.local
+!.env.example
+
+# IDE & Editor
 .vscode/*
 !.vscode/settings.json
 !.vscode/extensions.json
@@ -13,8 +27,38 @@ build/
 *.swp
 *.swo
 *~
+*.iml
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Cache & Temp
 .cache/
-.next/
-out/
-.turbo/
+.eslintcache
 *.tsbuildinfo
+.turbo/cache
+
+# Testing
+coverage/
+.nyc_output/
+*.lcov
+.junit.xml
+
+# OS
+.DS_Store
+Thumbs.db
+*.exe
+*.dll
+
+# EditorConfig
+.editorconfig.bak
+
+# Misc
+.sass-cache/
+.gradle/
+

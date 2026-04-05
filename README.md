@@ -207,33 +207,14 @@ npm install
 
 ### Step 2: Configure Environment Variables
 
-Create `.env` files in three locations:
+Create `.env` files in the following locations based on the `.env.example` files provided in each package (or as specified in the project documentation):
 
-**`packages/services/.env`:**
-```env
-PORT=3001
-NODE_ENV=development
-MONGODB_URI=mongodb://localhost:27017/contract-guard
-JWT_SECRET=AIzaSyD4M_ZY0WFeK-rYPtQo41es-qEpDLrHQSM
-REDIS_URL=redis://localhost:6379
-```
+- `packages/services/.env`
+- `packages/api-gateway/.env`
+- `packages/client/.env`
 
-**`packages/api-gateway/.env`:**
-```env
-PORT=3000
-NODE_ENV=development
-AUTH_SERVICE_URL=http://localhost:3001
-CONTRACT_SERVICE_URL=http://localhost:3002
-GUARD_SERVICE_URL=http://localhost:3003
-JWT_SECRET=AIzaSyD4M_ZY0WFeK-rYPtQo41es-qEpDLrHQSM
-```
+> **Important:** Use the same `JWT_SECRET` across all services for token validation to work correctly.
 
-**`packages/client/.env`:**
-```env
-VITE_API_URL=http://localhost:3000/api
-```
-
-> **Important:** Use the same JWT_SECRET across all services for token validation to work correctly.
 
 ### Step 3: Create Test User (Optional)
 

@@ -6,7 +6,7 @@ import User from './models/User.js'
 import authMiddleware from './middleware/auth.js'
 
 const app = express()
-const JWT_SECRET = process.env.JWT_SECRET || 
+const JWT_SECRET = process.env.JWT_SECRET
 const JWT_EXPIRE = '7d'
 const PORT = 3001
 

@@ -90,14 +90,16 @@ contract-guard/
 
 ### Configuration
 
-Create `.env` files in the following locations. Refer to the specific requirements below (use a secure `JWT_SECRET` for production).
+> ⚠️ **SECURITY WARNING**: Never commit sensitive credentials to version control. Always use `.env` files locally and add `.env` to `.gitignore`.
+
+Create `.env` files in the following locations. Refer to the specific requirements below (use a strong, randomly-generated `JWT_SECRET` for production).
 
 **`packages/services/.env`:**
 ```env
 PORT=3001
 NODE_ENV=development
-MONGODB_URI=your_mongo_db_connection_string
-JWT_SECRET=your_secure_jwt_secret
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_secure_jwt_secret_key_here
 REDIS_URL=your_redis_connection_string
 ```
 
